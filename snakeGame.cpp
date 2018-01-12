@@ -315,9 +315,7 @@ void gamecircle()//控制游戏
  printf("F1 为加速，F2 为减速\n");
  Pos(64,18);
  printf("ESC ：退出游戏.space：暂停游戏.");
- Pos(64,20);
- printf("c语言研究中心 www.dotcpp.com");
- status=R;
+ status=R;//默认开始时向右
  while(1)
  {
  Pos(64,10);
@@ -381,8 +379,6 @@ void gamecircle()//控制游戏
 void welcometogame()//开始界面
 {
  Pos(40,12);
- 
- system("title c语言研究中心 www.dotcpp.com");
  printf("欢迎来到贪食蛇游戏！");
  Pos(40,25);
  system("pause");
@@ -391,7 +387,7 @@ void welcometogame()//开始界面
  printf("用↑.↓.←.→分别控制蛇的移动， F1 为加速，2 为减速\n");
  Pos(25,13);
  printf("加速将能得到更高的分数。\n");
- system("pause");
+ system("pause");//默认开始时暂停
  system("cls");
 }
  
@@ -414,6 +410,7 @@ void endgame()//结束游戏
  }
  Pos(24,13);
  printf("您的得分是%d\n",score);
+ system("pause");
  exit(0);
 }
  
